@@ -48,7 +48,6 @@ is_prime = function(N){
     return(TRUE)
   }
   
-  
   #If N>1, checking to see if it is prime using a for loop
   for(i in 2:(N-1)){
     if(N %% i == 0){
@@ -79,7 +78,8 @@ colnames(prices)  = c("Price")
 
 #creating a function that finds the price of a blend
 price_of_blend = function(wine, vodka, lemon){
-  total_price = (prices["Wine", 1] *wine) + (prices["Vodka",1]*vodka) + 
+  
+  total_price  = (prices["Wine", 1] *wine) + (prices["Vodka",1]*vodka) + 
     (prices["Lemon Juice",1]*lemon)
 }
 
@@ -110,6 +110,7 @@ print(paste("Price of the blend: ", blend_c))
 
 #Question 3B
 
+#Finds the total price for 10 of Blend A, 4 of Blend B and 5 of Blend C
 entire_price = (10*blend_a) + (4*blend_b) + (5*blend_c)
 print(paste("The cost is:",entire_price))
 
